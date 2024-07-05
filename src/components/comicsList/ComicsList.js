@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 import './comicsList.scss';
 
@@ -44,12 +45,12 @@ const ComicsList = () => {
             }
             
             return (
-                <li className="comics__item">
-                <a href="#">
+                <li className="comics__item" key={i}>
+                <Link to={`/comics/${item.id}`}>
                     <img src={item.thumbnail} alt="ultimate war" className="comics__item-img"/>
                     <div className="comics__item-name">{item.name}</div>
                     <div className="comics__item-price">{item.price}$</div>
-                </a>
+                </Link>
             </li>
             )
         });

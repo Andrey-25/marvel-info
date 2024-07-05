@@ -1,10 +1,8 @@
-import appHeader from "../appHeader/AppHeader"
-import ErrorPage from "../erorPage/ErrorPage";
+import ErrorPage from "../errorPage/ErrorPage";
 
 const Page404 = () => {
     return (
         <>
-        <appHeader />
         <ErrorPage />
     </>
     )
